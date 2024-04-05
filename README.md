@@ -21,8 +21,11 @@ Phantom (Crybat/Jlaive Rewrite) is an antivirus evasion tool that can convert ex
 
 ## Donate
 BTC: bc1q56q504wh060l4uhf629c9x2mg66dc0y2jkdkpw
+
 LTC: ltc1qka5un80vrsrc3x5a22s6552ztr8jenw5wytq7d
+
 ETH: 0x0F80A5E152a2588EFB6f18AAb2A58841db425e97
+
 RVN: RAKRxWHgbmGcSid6V7NTRJxyPMY9CJCqdT
 
 ## Disclaimer
