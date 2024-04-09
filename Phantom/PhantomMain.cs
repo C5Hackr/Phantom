@@ -493,5 +493,37 @@ namespace Phantom
             obj.bindedFiles = paths.ToArray();
             return obj;
         }
+
+        private void startup_CheckedChanged(object sender, EventArgs e)
+        {
+            if (startup.Checked)
+            {
+                selfDelete.Checked = false;
+                selfDelete.Enabled = false;
+            }
+            else
+            {
+                if (!uacBypass.Checked)
+                {
+                    selfDelete.Enabled = true;
+                }
+            }
+        }
+
+        private void uacBypass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (uacBypass.Checked)
+            {
+                selfDelete.Checked = false;
+                selfDelete.Enabled = false;
+            }
+            else
+            {
+                if (!startup.Checked)
+                {
+                    selfDelete.Enabled = true;
+                }
+            }
+        }
     }
 }

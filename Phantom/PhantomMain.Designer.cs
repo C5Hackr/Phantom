@@ -39,6 +39,8 @@
             this.antiVM = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.optionsPage = new System.Windows.Forms.TabPage();
+            this.uacBypass = new System.Windows.Forms.CheckBox();
+            this.startup = new System.Windows.Forms.CheckBox();
             this.runas = new System.Windows.Forms.CheckBox();
             this.binderPage = new System.Windows.Forms.TabPage();
             this.removeFile = new System.Windows.Forms.Button();
@@ -46,8 +48,6 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.outputPage = new System.Windows.Forms.TabPage();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.startup = new System.Windows.Forms.CheckBox();
-            this.uacBypass = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.optionsPage.SuspendLayout();
             this.binderPage.SuspendLayout();
@@ -165,6 +165,30 @@
             this.optionsPage.Text = "Options";
             this.optionsPage.UseVisualStyleBackColor = true;
             // 
+            // uacBypass
+            // 
+            this.uacBypass.AutoSize = true;
+            this.uacBypass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uacBypass.Location = new System.Drawing.Point(6, 249);
+            this.uacBypass.Name = "uacBypass";
+            this.uacBypass.Size = new System.Drawing.Size(178, 33);
+            this.uacBypass.TabIndex = 13;
+            this.uacBypass.Text = "UAC Bypass";
+            this.uacBypass.UseVisualStyleBackColor = true;
+            this.uacBypass.CheckedChanged += new System.EventHandler(this.uacBypass_CheckedChanged);
+            // 
+            // startup
+            // 
+            this.startup.AutoSize = true;
+            this.startup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startup.Location = new System.Drawing.Point(6, 210);
+            this.startup.Name = "startup";
+            this.startup.Size = new System.Drawing.Size(121, 33);
+            this.startup.TabIndex = 12;
+            this.startup.Text = "Startup";
+            this.startup.UseVisualStyleBackColor = true;
+            this.startup.CheckedChanged += new System.EventHandler(this.startup_CheckedChanged);
+            // 
             // runas
             // 
             this.runas.AutoSize = true;
@@ -237,28 +261,6 @@
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(849, 368);
             this.listBox2.TabIndex = 4;
-            // 
-            // startup
-            // 
-            this.startup.AutoSize = true;
-            this.startup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startup.Location = new System.Drawing.Point(6, 210);
-            this.startup.Name = "startup";
-            this.startup.Size = new System.Drawing.Size(121, 33);
-            this.startup.TabIndex = 12;
-            this.startup.Text = "Startup";
-            this.startup.UseVisualStyleBackColor = true;
-            // 
-            // uacBypass
-            // 
-            this.uacBypass.AutoSize = true;
-            this.uacBypass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uacBypass.Location = new System.Drawing.Point(6, 249);
-            this.uacBypass.Name = "uacBypass";
-            this.uacBypass.Size = new System.Drawing.Size(178, 33);
-            this.uacBypass.TabIndex = 13;
-            this.uacBypass.Text = "UAC Bypass";
-            this.uacBypass.UseVisualStyleBackColor = true;
             // 
             // PhantomMain
             // 

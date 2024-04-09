@@ -219,9 +219,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\runpe.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="ghost_icon_838x1024_08e6wfgk_yMY_icon.ico" />
     <EmbeddedResource Include="Resources\UAC.dll" />
     <EmbeddedResource Include="Resources\UAC64.dll" />
