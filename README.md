@@ -2,7 +2,7 @@
 
 Phantom (Crybat/Jlaive Rewrite) is an antivirus evasion tool that can convert executables to undetectable batch files, .NET assemblies are not guaranteed to work.
 
-[![](https://raw.githubusercontent.com/C5Hackr/Phantom/main/pdf.png) Technical Documentation](https://github.com/C5Hackr/Phantom/blob/main/Phantom%20Technical%20Documentation.pdf)
+[![](https://raw.githubusercontent.com/C5Hackr/Phantom/main/Images/pdf.png) Technical Documentation](https://github.com/C5Hackr/Phantom/blob/main/Phantom%20Technical%20Documentation.pdf)
 
 ## Features
 - .NET/Native (x64) support
@@ -17,8 +17,11 @@ Phantom (Crybat/Jlaive Rewrite) is an antivirus evasion tool that can convert ex
 
 ## Screenshots
 
-![image](https://user-images.githubusercontent.com/70506265/183271813-18ae7e89-f800-47a8-ab90-8fad9c81a5ee.png)
-![image](https://user-images.githubusercontent.com/70506265/181862365-4f49325b-4986-44a1-8f62-f20c67e9367e.png)
+![image](https://raw.githubusercontent.com/C5Hackr/Phantom/main/Images/PhantomUI.png)
+~Before~
+![image](https://raw.githubusercontent.com/C5Hackr/Phantom/main/Images/PhantomBefore.png)
+~After~
+![image](https://raw.githubusercontent.com/C5Hackr/Phantom/main/Images/PhantomAfter.png)
 
 
 ## Donate
