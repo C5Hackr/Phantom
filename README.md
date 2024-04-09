@@ -18,9 +18,10 @@ Phantom (Crybat/Jlaive Rewrite) is an antivirus evasion tool that can convert ex
 ## Screenshots
 
 ![image](https://raw.githubusercontent.com/C5Hackr/Phantom/main/Images/PhantomUI.png)
-~Before~
+
+**Before**
 ![image](https://raw.githubusercontent.com/C5Hackr/Phantom/main/Images/PhantomBefore.png)
-~After~
+**After**
 ![image](https://raw.githubusercontent.com/C5Hackr/Phantom/main/Images/PhantomAfter.png)
 
 
